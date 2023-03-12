@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export const AddSupplire = () => {
   let ref1=useRef()
@@ -74,7 +75,7 @@ export const AddSupplire = () => {
             <input  ref={ref9}  onChange={(e) => setAddData({ ...addData, address:{...addData.address, phone: e.target.value} })}  type='number' placeholder='Phone:'/><br/>
             <button onClick={(e)=>ref1.current.value&&ref2.current.value&&ref3.current.value
               &&ref3.current.value&&ref4.current.value&&ref5.current.value&&ref6.current.value&&ref7.current.value
-              &&ref8.current.value&&ref9.current.value?act(e):alert("məlumat tam deyil")}>Add</button>
+              &&ref8.current.value&&ref9.current.value?act(e):alert("məlumat tam deyil")}><Link to='/'>Add</Link></button>
         </form>
     </div>
   )

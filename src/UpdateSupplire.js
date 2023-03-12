@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 
 export const UpdateSupplire = () => {
@@ -93,7 +93,7 @@ export const UpdateSupplire = () => {
         <input ref={ref7} onChange={(e) => setAddData({ ...addData, address: { ...addData.address, postalCode: e.target.value } })} placeholder='Postal Code:' /><br />
         <input ref={ref8} onChange={(e) => setAddData({ ...addData, address: { ...addData.address, country: e.target.value } })} placeholder='Country:' /><br />
         <input ref={ref9} onChange={(e) => setAddData({ ...addData, address: { ...addData.address, phone: e.target.value } })} placeholder='Phone:' /><br />
-        <button onClick={(e) => updateData(e)}>Update</button>
+       <button onClick={(e) => updateData(e)}> <Link to='/'>Update</Link></button>
       </div>)}
 
     </div>
