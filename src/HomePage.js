@@ -45,7 +45,7 @@ export  const HomePage = () => {
   <td>{item.companyName}</td>
   <td>{item.contactName}</td>
   <td>{item.contactTitle}</td>
- <td><Link className='upDateLink'  to={`/${item.id}`}>More detale</Link>
+ <td><Link className='upDateLink'  to={`/${item.id}`}>Detales</Link>
 <Link className='upDateLink' to={`/updateSupplire/${item.id}`}>Update</Link>
  <button onClick={(e)=>delet(e,item)&setDel(del+1)}>x</button></td>
  
