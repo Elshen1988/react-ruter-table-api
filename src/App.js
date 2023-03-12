@@ -1,24 +1,30 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { Route, Routes, Link } from "react-router-dom"
+import { HomePage } from './HomePage';
+import { Detail } from './Detail';
+import { AddSupplire } from './AddSupplire';
+import { UpdateSupplire } from './UpdateSupplire';
+
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+        <nav><br/>
+          <Link to='/'>Home Page</Link><br/><br/>
+          <Link to='/addSupplire'>Add Supplire</Link><br/>                  
+        </nav>     
+      </div>
+      <Routes>
+        <Route path='/' element={<HomePage/>} />
+        <Route path='/:id'element={<Detail/>}/>
+        <Route path='/addSupplire' element={<AddSupplire/>}/>
+        <Route path='/updateSupplire/:idd' element={<UpdateSupplire/>}/>
+      </Routes>     
     </div>
+    
   );
 }
 
